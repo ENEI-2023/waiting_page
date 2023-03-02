@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ENEI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="robots" content="noindex">
+
+    <style>
+        @font-face {
+            font-family: 'Panton Black';
+            src: url('Panton_Black.ttf');
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #121517;
+        }
+
+        .title {
+            color: #f9a41b;
+            font-size: 1.7rem;
+            font-family: 'Panton Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #fff;
+            font-size: 1.5rem;
+            font-family: 'Panton Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .text {
+            color: #fff;
+            font-size: 1.3rem;
+            font-family: 'Panton Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .div {
+            -webkit-animation: floating 5s -1s infinite;
+            animation: floating 5s -1s infinite;
+            --value: -3%;
+        }
+
+        .logo,
+        .tiles {
+            max-width: 400px;
+            height: 400px;
+
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: perspective(500px);
+            transform: perspective(500px);
+            margin-bottom: 40px;
+            margin-top: 30px;
+            --value: -3%;
+        }
+
+        .logo {
+            padding-left: 24%;
+            width: 65%;
+            transform-origin: 50% 100%;
+            -webkit-animation: floating 5s -1s infinite;
+            animation: floating 5s -1s infinite;
+        }
+
+        .tiles {
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateZ(50px);
+        }
+
+
+        @-webkit-keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(var(--value, -2%));
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(var(--value, -2%));
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="text">Já estamos a preparar o próximo</p>
+    <p class="title">Encontro Nacional de Estudantes de Informática</p>
+
+    <div class="div">
+        <img src="logo.svg" alt="" width="10" class="logo">
+        <img src="tiles.png" alt="" width="10" class="tiles" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5"
+            data-tilt-speed="400" data-tilt-scale="1.1" data-tilt-perspective="1000" data-tilt-max="15"
+            data-tilt-full-page-listening>
+    </div>
+
+    <p class="subtitle">28 &nbsp;setembro &nbsp;&nbsp;&ndash;&nbsp;&nbsp; 1 &nbsp;outubro &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Aveiro</p>
+
+    <script src="https://micku7zu.github.io/vanilla-tilt.js/src/vanilla-tilt.min.js"></script>
+
+</body>
+
+</html>
